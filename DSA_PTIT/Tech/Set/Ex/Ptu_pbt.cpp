@@ -17,19 +17,32 @@ using namespace std;
 //2 1 2 1 3
 //Sample Output 0
 //3
+// int main() {
+//   set<int> s={1,3,4,7,9};
+//   for(set<int>::iterator n=s.begin(); n!=s.end(); n++){
+//     cout<<*n<<" ";
+//   }
+//   cout<<endl;
+//   //Them dao nguoc ptu rieng bt = reverse_iterator
+//   for(set<int>::reverse_iterator m=s.rbegin(); m!=s.rend(); m++){
+//     cout<<*m<<" ";
+//   }
+//   cout<<endl;
+//   //Them dao nguoc ptu rieng bt = auto
+//   for(auto m=s.rbegin(); m!=s.rend(); m++){
+//     cout<<*m<<" ";
+//   }
+// }
+using ll=long long;
 int main() {
-  set<int> s={1,3,4,7,9};
-  for(set<int>::iterator n=s.begin(); n!=s.end(); n++){
-    cout<<*n<<" ";
-  }
-  cout<<endl;
-  //Them dao nguoc ptu rieng bt = reverse_iterator
-  for(set<int>::reverse_iterator m=s.rbegin(); m!=s.rend(); m++){
-    cout<<*m<<" ";
-  }
-  cout<<endl;
-  //Them dao nguoc ptu rieng bt = auto
-  for(auto m=s.rbegin(); m!=s.rend(); m++){
-    cout<<*m<<" ";
-  }
+    ios::sync_with_stdio(false);//giải thích
+    cin.tie(nullptr);//giải thích
+    int n; cin>>n;
+    set<int> s;
+    for(int i=0;i<n;i++) {
+        int x; cin>>x;
+        s.insert(x);
+    }
+    cout<<s.size()<<endl;
+    return 0;
 }
