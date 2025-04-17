@@ -13,13 +13,8 @@ int main() {
         cin >> n;
         vector<int> a(n);
 
-        // Nhập và kiểm tra (nếu cần)
         for (int i = 0; i < n; i++) {
             cin >> a[i];
-            // if (a[i] < 1000 || a[i] > 9999) {
-            //     cout << "Invalid number: must have exactly 4 digits" << endl;
-            //     return 1;
-            // }
         }
 
         sort(a.begin(), a.end());

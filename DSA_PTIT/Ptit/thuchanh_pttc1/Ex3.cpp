@@ -1,22 +1,6 @@
-#include <bits/stdc++.h>
-using namespace std;
-int n, k, a[100005];
-main()
-{
-    int t, i, kq;
-    cin >> t;
-    while (t--)
-    {
-        cin >> n >> k;
-        for (i = 0; i < n; i++)
-            cin >> a[i];
-        vt = lower_bound(a, a + n, k) - a;
-        if (a[vt] == k)
-            cout << vt + 1 << endl;
-        else
-            cout << "NO" << endl;
-    }
-}
+//
+// Created by TDG on 25/03/2025.
+//
 #include <bits/stdc++.h>
 using namespace std;
 int Search(int a[], int l, int r, int x)
@@ -32,7 +16,6 @@ int Search(int a[], int l, int r, int x)
     }
     return -1;
 }
-
 main()
 {
     int t, n, m, i;
