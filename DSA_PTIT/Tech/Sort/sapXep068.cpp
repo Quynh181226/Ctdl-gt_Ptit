@@ -6,7 +6,7 @@
 using namespace std;
 //function dem so lg chu so 0,6,8 cua n 
 int count1(int n){
-    if(n==0) return 1;//giải thích dòng này
+    if(n==0) return 1;//???????????????
     int cnt=0;
     while(n!=0){
         int r=n%10;
