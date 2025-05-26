@@ -13,12 +13,13 @@
 | **Ngăn xếp (Stack)**                     | Cấu trúc dữ liệu LIFO (Last In First Out)                     | Thao tác push/pop nhanh, theo thứ tự ngược  | Undo, duyệt cây, giải thuật biểu thức         |
 | **Hàng đợi (Queue)**                     | Cấu trúc dữ liệu FIFO (First In First Out)                    | Thao tác enqueue/dequeue theo thứ tự đến    | BFS, quản lý tác vụ, mô phỏng hàng chờ        |
 
---BFS--
+                  --BFS--
 - Là thuật toán duyệt or tkiem trg đồ thị or cây,
 - đi theo tầng nghĩa là duyệt tất cả các đỉnh kề trước, 
 - để duyệt tất cả tổ hợp.
 - khi đi sâu hơn(duyệt theo mức level eg: độ dài chuỗi)
-        - - -Cách hoạt động của BFS: - - -
+       
+                  - - -Cách hoạt động của BFS: - - -
 1. Bắt đầu từ một đỉnh nguồn.
 2. Dùng hàng đợi (queue) để lưu các đỉnh đang chờ duyệt.
 3. Duyệt từng đỉnh từ hàng đợi → lấy ra → duyệt các đỉnh kề chưa thăm → đưa vào hàng đợi.
