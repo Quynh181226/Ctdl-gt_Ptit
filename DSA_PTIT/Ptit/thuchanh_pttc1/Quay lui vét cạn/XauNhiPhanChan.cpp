@@ -16,6 +16,9 @@
 // 1 0 1 0
 // 1 1 0 0
 // 1 1 1 1
+
+
+//HINH NHU 2 BAI NAY LA IN XAU NHI PHAN THEO THU TU TU DIEN
 //#include<iostream>
 //#include<stdbool.h>
 //bool x;
@@ -46,38 +49,70 @@
 //    }
 //    cout << endl;
 //}
-#include <iostream>
+// #include <iostream>
+// using namespace std;
+//
+// int a[100];
+//
+// void in(int n){
+//     for(int i = 0; i<n; i++){
+//         cout<<a[i];
+//     }
+//     cout<<endl;
+// }
+//
+// void quaylui(int k, int n){
+//     for(int i = 0; i<= 1; i++)
+//     {
+//         a[k] = i;
+//         if(k == n-1){
+//             in(n);
+//         }
+//         else{
+//             quaylui(k+1,n);
+//         }
+//     }
+// }
+//
+// int main()
+// {
+// 	int n;
+// 	cin>>n;
+//
+//     quaylui(0, n);
+// }
+
+// #include<bits/stdc++.h>
+#include<iostream>
+
 using namespace std;
 
-int a[100];
+int arr[15], n;
 
-void show(int n){
-    for(int i = 0; i<n; i++){
-        cout<<a[i];
+void in() {
+    int cnt = 0;
+    for (int i=0; i<n;i++) {
+        if (arr[i]==1) cnt++;
     }
-    cout<<"\n";
-}
-
-
-void Backtracking(int k, int n){
-    for(int i = 0; i<= 1; i++)
-    {
-        a[k] = i;
-        if(k == n-1){
-            show(n);
+    if (cnt%2==0) {
+        for (int i=0; i<n;i++) {
+            cout<<arr[i];
+            if (i<n-1) cout<<" ";
         }
-        else{
-            Backtracking(k+1,n);
-        }
+        cout<<endl;
     }
 }
 
-int main()
-{
-	int n;
-	cout<<"Nhap n: ";
-	cin>>n;
-
-    Backtracking(0, n);
+void quaylui(int b) {
+    for (int i=0; i<=1; i++) {
+        arr[b]=i;
+        if (b==n-1) in();
+        else quaylui(b+1);
+    }
 }
 
+int main() {
+    cin>>n;
+    if (n>2&&n<16) quaylui(0);
+    else return 0;
+}
