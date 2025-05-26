@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-// Cho dãy số a[] có n số nguyên dương. Tất cả các số trong dãy đều có đúng 4 chữ số.
+// Cho dãy số a[] có n số nguyên dương. Tất cả các số trong dãy đều có đúng 4 chữ số.
 // Hãy sắp xếp dãy số a theo thứ tự tăng dần và in kết quả ra màn hình.
 //     Input
 //     Dòng đầu ghi số bộ test,
