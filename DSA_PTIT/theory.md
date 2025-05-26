@@ -18,7 +18,7 @@
 - đi theo tầng nghĩa là duyệt tất cả các đỉnh kề trước, 
 - để duyệt tất cả tổ hợp.
 - khi đi sâu hơn(duyệt theo mức level eg: độ dài chuỗi)
-- - -Cách hoạt động của BFS: - - -
+        - - -Cách hoạt động của BFS: - - -
 1. Bắt đầu từ một đỉnh nguồn.
 2. Dùng hàng đợi (queue) để lưu các đỉnh đang chờ duyệt.
 3. Duyệt từng đỉnh từ hàng đợi → lấy ra → duyệt các đỉnh kề chưa thăm → đưa vào hàng đợi.
