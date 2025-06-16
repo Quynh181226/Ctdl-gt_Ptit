@@ -18,33 +18,29 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-int ktra(string s) {
-    int n = s.length();
+bool ktra(string s) {
     stack<char> st;
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < s.length(); i++) {
         if (s[i] == '(' || s[i] == '[' || s[i] == '{') {
             st.push(s[i]);
         } else {
-            if (st.empty())
-                return 0;
+            if (st.empty()) return false;
             char in = st.top(), out = s[i];
             if (in == '(' && out == ')') st.pop();
             else if (in == '[' && out == ']') st.pop();
             else if (in == '{' && out == '}') st.pop();
-            else return 0;
+            else return false;
         }
     }
     return st.empty();
 }
 
-int main() {
-    int t;
-    cin >> t;
-    while (t--) {
-        string s;
-        cin >> s;
-        if (ktra(s)) cout << "YES" << endl;
-        else cout << "NO" << endl;
+main() {
+    cin.tie(0)->sync_with_stdio(false);
+    int t; cin>>t;
+    while(t--) {
+        string s; cin>>s;
+        if(ktra(s)) cout<<"YES"<<'\n';
+        else cout<<"NO"<<'\n';
     }
-    return 0;
 }

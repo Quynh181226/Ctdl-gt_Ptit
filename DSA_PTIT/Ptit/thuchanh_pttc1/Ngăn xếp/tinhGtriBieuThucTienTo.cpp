@@ -9,10 +9,9 @@ int tinhGtri(int a, int b, char c) {
     if (c == '-') return a - b;
     if (c == '*') return a * b;
     if (c == '/') return a / b;
-    return 0;
 }
 
-void tinhHauTo() {
+void tinhTienTo() {
     string s; cin >> s;
     stack<int> st;
     for (int i = s.length() - 1; i >= 0; --i) {
@@ -24,14 +23,13 @@ void tinhHauTo() {
         }
         else st.push(s[i] - '0');
     }
-    cout << st.top()<<endl;
+    cout << st.top()<<'\n';
 }
 
-int main() {
+main() {
     int t; cin >> t;
     while (t--) {
-        tinhHauTo();
+        tinhTienTo();
         // cout << "\n";
     }
-    return 0;
 }
