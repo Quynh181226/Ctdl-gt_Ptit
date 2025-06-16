@@ -9,7 +9,9 @@ void print(vector<int> &a) {
     }
     cout<<"\n";
 }
-
+// Time: Insert_sort1: O(n^2)
+// Time: Bubble_sort2: O(n^2)
+// Space: O(n)
 void sort1(vector<int> &a) {
     for (int i=1; i<a.size(); i++) {
         int key=a[i];
