@@ -9,7 +9,10 @@ main(){
     for(int i=0; i<n-1;i++){
         int check=1;
         for(int j=i+1;j<n;j++){
-            if(a[j]>=a[i]) check=0; break;
+            if(a[j]>=a[i]){
+                check=0;
+                break;
+           }
         }
         if (check==1) printf("%d ",a[i]);
     }
