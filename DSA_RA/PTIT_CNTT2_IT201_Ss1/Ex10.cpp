@@ -22,6 +22,7 @@ bool hVi2(string s1, string s2) {
     sort(s2.begin(), s2.end());
     return s1==s2;
 }
+
 main() {
     string s1, s2;
     getline(cin, s1);

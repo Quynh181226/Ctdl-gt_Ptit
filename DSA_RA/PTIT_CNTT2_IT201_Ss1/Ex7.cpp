@@ -25,9 +25,7 @@ bool dupli2(int a[], int n) {
 }
 main() {
     int n; cin>>n;
-    if (n<0||n>1000) {
-        return 1;
-    }
+    if (n<0||n>1000) return 1;
     int a[1000];
     // vector<int> a(n);
     for(int i=0;i<n;i++) {

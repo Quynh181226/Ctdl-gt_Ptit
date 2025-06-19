@@ -3,7 +3,8 @@ using namespace std;
 main() {
     int n, value;
     cin>>n;
-    vector<int> v(n);
+    // vector<int> v(n);
+    int v[100];
     for(int i=0;i<n;i++) cin>>v[i];
     cin>>value;
     int check=0;
