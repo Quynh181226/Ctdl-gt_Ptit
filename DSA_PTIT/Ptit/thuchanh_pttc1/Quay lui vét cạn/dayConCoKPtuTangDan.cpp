@@ -43,7 +43,7 @@ void quaylui(int i) {
 
 main() {
     int t;
-    cin >> t;~
+    cin >> t;
     while(t--) {
         cin >> n >> k;
         for(int i = 0; i < n; i++) cin >> b[i];

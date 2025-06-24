@@ -25,13 +25,9 @@ int min(int **a, int rows, int cols) {
 }
 main() {
     int cols, rows; scanf("%d %d",&rows,&cols);
-    if (rows<=0 && cols<=0) {
-        printf("Invalid rows and cols");
-    }else if (rows<=0){
-        printf("Invalid rows");
-    }else if (cols<=0){
-        printf("Invalid cols");
-    }
+    if (rows<=0 && cols<=0) printf("Invalid rows and cols");
+    else if (rows<=0) printf("Invalid rows");
+    else if (cols<=0) printf("Invalid cols");
     int **a=(int **)malloc(rows*sizeof(int *));
     for(int i=0;i<rows;i++) {
         a[i]=(int *)malloc(cols*sizeof(int));
