@@ -6,11 +6,11 @@
 #include <bits/stdc++.h>
 using namespace std;
 int factorial(int n) {
-if(n==0 || n==1) return 1;
+    if(n==0 || n==1) return 1;
 return n*factorial(n-1);
 }
 main(){
-int n; cin>>n;
-if(n<1) cout<<"Invalid";
-else cout<<factorial(n);
+    int n; cin>>n;
+    if(n<1) cout<<"Invalid";
+    else cout<<factorial(n);
 }
