@@ -11,6 +11,7 @@ void in(int n) {
 }
 main() {
     int n; cin>>n;
-    in(n);
+    if(n<=0) return 1;
+    else in(n);
 }
 
