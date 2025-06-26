@@ -17,7 +17,7 @@ using namespace std;
 //-43162 khi gọi từ 5
 int tong(int n) {
     if (n == 1) return 1;
-    else return n+tong(n-1);
+    return n+tong(n-1);
 }
 void hello() {
     cout<<"Hello World \n";
@@ -27,12 +27,12 @@ void hello() {
 //De: n! = n*(n-1)*(n-2)*...*1
 int gt(int n) {
     if (n==0) return 1;
-    else return n*gt(n-1);
+    return n*gt(n-1);
 }
 
  long long fibo(int n) {
     if (n<=1) return n;
-    else return fibo(n-1)+fibo(n-2);
+    return fibo(n-1)+fibo(n-2);
 }
 
 int nCk(int n, int k) {

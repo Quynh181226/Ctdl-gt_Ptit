@@ -1,0 +1,1 @@
+#### * ý nghĩa return 1, 0 trong main và trg hàm tính toán là khác nhau và trong hàm tính toán khi muốn tìm đường đi, gtri ko thể dùng true, false nó vô nghĩa ko thể biểu thị ctrinh thực hiện được đến đâu và gtri của chúng ra sao 
