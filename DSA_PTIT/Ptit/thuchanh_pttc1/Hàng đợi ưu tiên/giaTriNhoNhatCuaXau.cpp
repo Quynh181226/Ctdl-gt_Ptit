@@ -1,10 +1,7 @@
-//
-// Created by TDG on 24/06/2025.
-//
-//
 #include <bits/stdc++.h>
 using namespace std;
 void slove() {
+}
 int k; cin >> k;
     string s; cin >> s;
     int a[127]={};

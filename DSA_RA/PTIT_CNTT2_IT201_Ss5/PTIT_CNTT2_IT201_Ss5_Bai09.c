@@ -1,9 +1,8 @@
 #include <stdio.h>
 int cols, rows;
 int totalPath(int i, int j) {
-    //invalid
-    if(i>=rows||j>=cols) return 0;
     //destination => basecase stop, have 1 path valid
+    if(i>=rows||j>=cols) return 0;
     if(i==rows-1&&j==cols-1) return 1;
 return totalPath(i+1,j)+totalPath(i,j+1);
 }
