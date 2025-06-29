@@ -1,4 +1,4 @@
-//n so fibo dau tien
+//n so fibo dau tien reverse
 #include <stdio.h>
 
 long long fibo(int n, int i, int f1, int f2) {
