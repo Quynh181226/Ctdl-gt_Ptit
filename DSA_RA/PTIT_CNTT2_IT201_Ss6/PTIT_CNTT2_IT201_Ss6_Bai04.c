@@ -6,9 +6,8 @@ if (n==0) return;
     tower(n-1, b, a, c);
 }
 main() {
-    int n;
+    int n; scanf("%d",&n);
     char a='A'; char b='B'; char c='C';
-    scanf("%d",&n);
     if (n<=0) {
         printf("Invalid");
         return 0;
