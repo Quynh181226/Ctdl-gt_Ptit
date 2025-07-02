@@ -25,36 +25,33 @@ node* createLinkedList(int n) {
             }
             return NULL;
         }
-        if (head) {
+        if (head==NULL) {
+            head=tail=newNode;
+        }else {
             tail->next=newNode;
             tail=newNode;
-        }else {
-            head=tail=newNode;
         }
     }
     return head;
 }
-int search(node* head, int f) {
-    node* curr=head;
-    while (curr) {
-        if (curr->data==f) {
-            return 1;
-        }
-        curr=curr->next;
+node* insertElHead(node* head, int x) {
+    node* newNode=createNode(x);
+    if (!newNode) return head;
+    newNode->next=head;
+    return newNode;
+}
+void print(node* head) {
+    while(head) {
+        printf("%d ", head->data);
+        head=head->next;
     }
-    return 0;
 }
 main() {
     int n=5;
     node* head=createLinkedList(n);
     if (!head) return 1;
-    int f; scanf("%d", &f);
-    // print(head);
-    if (search(head, f)) {
-        printf("YES");
-    }else {
-        printf("NO");
-    }
+    int x; scanf("%d", &x);
+    print(insertElHead(head, x));
     while(head) {
         node* tmp=head;
         head=head->next;

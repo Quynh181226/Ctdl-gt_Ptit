@@ -25,29 +25,36 @@ node* createLinkedList(int n) {
             }
             return NULL;
         }
-        if (head) {
+        if (head==NULL) {
+            head=tail=newNode;
+        }else {
             tail->next=newNode;
             tail=newNode;
-        }else {
-            head=tail=newNode;
         }
     }
     return head;
 }
-int cntNode(node* head) {
-    int cnt=0;
-    node* tmp=head;
-    while(tmp) {
-        ++cnt;
-        tmp=tmp->next;
+int search(node* head, int f) {
+    node* curr=head;
+    while (curr) {
+        if (curr->data==f) {
+            return 1;
+        }
+        curr=curr->next;
     }
-    return cnt;
+    return 0;
 }
 main() {
-    int n; scanf("%d",&n);
+    int n=5;
     node* head=createLinkedList(n);
     if (!head) return 1;
-    printf("Linked List have %d el", cntNode(head));
+    int f; scanf("%d", &f);
+    // print(head);
+    if (search(head, f)) {
+        printf("YES");
+    }else {
+        printf("NO");
+    }
     while(head) {
         node* tmp=head;
         head=head->next;

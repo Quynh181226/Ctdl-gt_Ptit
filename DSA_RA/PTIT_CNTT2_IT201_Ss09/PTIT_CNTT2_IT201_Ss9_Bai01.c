@@ -28,8 +28,7 @@ node* createLinkedList() {
             return NULL;
         }
         if (head==NULL){
-            head=newNode;
-            curr=newNode;
+            head=curr=newNode;
         }else {
             curr->next=newNode;
             curr=newNode;

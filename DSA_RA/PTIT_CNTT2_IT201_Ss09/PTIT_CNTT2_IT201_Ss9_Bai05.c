@@ -26,26 +26,28 @@ node* createLinkedList(int n) {
             return NULL;
         }
         if (head) {
+            head=tail=newNode;
+        }else {
             tail->next=newNode;
             tail=newNode;
-        }else {
-            head=tail=newNode;
         }
     }
     return head;
 }
-void print(node* head) {
-    int idx=1;
-    while(head) {
-        printf("Node %d: %d\n", idx++, head->data);
-        head=head->next;
+int cntNode(node* head) {
+    int cnt=0;
+    node* tmp=head;
+    while(tmp) {
+        ++cnt;
+        tmp=tmp->next;
     }
+    return cnt;
 }
 main() {
-    int n=5;
+    int n; scanf("%d",&n);
     node* head=createLinkedList(n);
     if (!head) return 1;
-    print(head);
+    printf("Linked List have %d el", cntNode(head));
     while(head) {
         node* tmp=head;
         head=head->next;
