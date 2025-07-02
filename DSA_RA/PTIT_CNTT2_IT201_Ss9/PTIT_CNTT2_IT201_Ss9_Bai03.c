@@ -44,12 +44,6 @@ int search(node* head, int f) {
     }
     return 0;
 }
-// void print(node* head) {
-//     while(head) {
-//         printf("%d", head->data);
-//         head=head->next;
-//     }
-// }
 main() {
     int n=5;
     node* head=createLinkedList(n);
