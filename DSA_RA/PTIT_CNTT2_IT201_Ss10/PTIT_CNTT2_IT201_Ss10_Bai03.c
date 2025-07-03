@@ -37,28 +37,19 @@ node* createLinkedList(int a[], int n) {
     }
     return head;
 }
-node* deleNode(node* head) {
-    if (head==NULL) return NULL;
-    if (head->next==NULL) {
-        free(head);
-        return NULL;
+node* appendNode(node* head, int val) {
+    node* newNode=createNode(val);
+    if (!newNode) return head;
+    if (head==NULL) {
+        head=newNode;
+    }else {
+        node* curr=head;
+        while(curr->next!=NULL) {
+            curr=curr->next;
+        }
+        curr->next=newNode;
+        return head;
     }
-    // node* curr=head;
-    // node* nextNode=curr->next;
-    // while (nextNode!=NULL) {
-    //     curr=nextNode;
-    //     nextNode=curr->next;
-    // }
-    // free(nextNode);
-    // curr->next=NULL;
-    // return head;
-    node* curr=head;
-    while (curr->next->next!=NULL) {
-        curr=curr->next;
-    }
-    free(curr->next);
-    curr->next=NULL;
-    return head;
 }
 node* print(node* head) {
     if (head==NULL) return NULL;
@@ -72,8 +63,9 @@ main() {
     int n=sizeof(a)/sizeof(a[0]);
     // if (n<=0) return 1;
     node* head=createLinkedList(a, n);
-    if (head==NULL) return 1;
-    head=deleNode(head);
+    // if (head==NULL) return 1;
+    int x; scanf("%d",&x);
+    head=appendNode(head,x);
     print(head);
     frees(head);
 }
