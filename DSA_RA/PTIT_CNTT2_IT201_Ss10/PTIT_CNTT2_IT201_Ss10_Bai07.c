@@ -66,7 +66,7 @@ Node* print(Node* head) {
 main() {
     int n; scanf("%d", &n);
     Node* head=createEl(n);
-    if (n<=0||head==NULL) return 1;
+    if (n<0||head==NULL) return 1;
     select(head);
     print(head);
     frees(head);

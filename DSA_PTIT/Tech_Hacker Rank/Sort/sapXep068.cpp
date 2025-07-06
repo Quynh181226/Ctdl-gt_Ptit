@@ -19,7 +19,7 @@ int count1(int n){
 }
 bool cmp(int x, int y){
     if(count1(x)!=count1(y)){
-        return (x)<count(y);
+        return x<y;
     }else{
         return x>y;
     }

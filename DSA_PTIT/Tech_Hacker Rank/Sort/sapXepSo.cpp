@@ -31,11 +31,12 @@ bool cmp1(int x, int y){
 bool cmp2(int x, int y){
     if(x<y){
         return true;
-    }else{
-        return false;
     }
+    return false;
 }
-bool cmp(int x, int y) return abs(x)<abs(y);
+bool cmp(int x, int y) {
+    return abs(x)<abs(y);
+}
 int main(){
     int n; cin>>n;
     char arr[n];

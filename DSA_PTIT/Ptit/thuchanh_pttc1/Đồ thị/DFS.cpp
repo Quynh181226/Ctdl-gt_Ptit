@@ -41,7 +41,8 @@ main(){
 			List[x].push_back(y);
 			List[y].push_back(x);
 		}
-		DFS(u);		cout<<endl;
+		DFS(u);
+		cout<<endl;
 	}
 }
 
