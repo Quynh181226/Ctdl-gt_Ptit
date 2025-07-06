@@ -12,13 +12,28 @@ node* createNode(int x) {
     newNode->prev=NULL;
     return newNode;
 }
-void addNode(node** head, int val) {
+void addNode(node** head, int val, int pos) {
     node* newNode=createNode(val);
-    if(*head!=NULL) {
-        newNode->next=*head;
-        (*head)->prev=newNode;
+    if(*head==NULL||pos==0) {
+       if(*head!=NULL) {
+           newNode->next=*head;
+           (*head)->prev=newNode;
+       }
+        *head=newNode;
+        return;
     }
-    *head=newNode;
+    node* curr=*head;
+    int currPos=0;
+    while(curr->next!=NULL&&currPos<pos-1) {
+        curr=curr->next;
+        currPos++;
+    }
+    newNode->next=curr->next;
+    newNode->prev=curr;
+    if(curr->next!=NULL) {
+        curr->next->prev=newNode;
+    }
+    curr->next=newNode;
 }
 void print(node* head) {
     node* curr=head;
@@ -41,7 +56,7 @@ main() {
     n4->prev=n3;
     n4->next=n5;
     n5->prev=n4;
-    int val; scanf("%d",&val);
-    addNode(&head,val);
+    int val, pos; scanf("%d %d",&val,  &pos);
+    addNode(&head,val, pos);
     print(head);
 }
