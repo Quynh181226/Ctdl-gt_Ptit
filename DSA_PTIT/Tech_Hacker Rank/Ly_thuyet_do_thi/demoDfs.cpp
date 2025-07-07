@@ -25,3 +25,36 @@
 // 5 1
 // Sample Output 0
 // 3 2 5 1 4
+#include<bits/stdc++.h>
+using namespace std;
+bool chuaxet[1005];
+vector<int> a[1005];
+void dfs(int u){
+    //danh dau da xet -> in đỉnh đó
+    chuaxet[u]=false;
+    cout<<u<<" ";//NEU CAN IN THI MS CO DONG NAY KHONG THI BO DI
+    //duyệt qua danh sách các đỉnh kề của đỉnh u
+    //u lần lượt là các đỉnh kề đó
+    for (int v: a[u]) {
+        if (chuaxet[v]) dfs(v);
+    }
+}
+main(){
+    int t; cin>>t;
+    while(t--) {
+        memset(chuaxet,true,sizeof(chuaxet));
+        for(int i=1;i<=1005;i++) a[i].clear();
+        int m, n, s;
+        cin>>n>>m>>s;
+        for (int i=1;i<=m;i++) {
+            int x, y; cin>>x>>y;
+            a[x].push_back(y);
+            a[y].push_back(x);
+        }
+        for (int i=1; i<=n; i++) {
+            sort(a[i].begin(), a[i].end());
+        }
+        dfs(s);
+        cout<<endl;
+    }
+}
