@@ -3,7 +3,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-// #define max 100
 typedef struct{
     char *data;
     int top;

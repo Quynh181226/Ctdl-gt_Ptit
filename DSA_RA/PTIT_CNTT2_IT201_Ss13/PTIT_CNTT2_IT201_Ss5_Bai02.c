@@ -1,7 +1,6 @@
 #include<stdio.h>
 #include <stdlib.h>
 
-// #define max 100
 typedef struct{
     int *data;
     int top;
