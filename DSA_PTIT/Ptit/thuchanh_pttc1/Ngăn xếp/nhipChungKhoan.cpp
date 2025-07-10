@@ -17,6 +17,41 @@
 // 1 1 1 2 1 4 6
 
 #include <bits/stdc++.h>
+
+using namespace std;
+
+
+void stock(int arr[], int length) {
+    int cnt = 1;
+    for(int i=0; i<length; i++){
+        cnt = 1;
+        for(int j=i-1; j>=0; j--){
+            if(arr[j] <= arr[i]){
+                cnt++;
+            }else{
+                break;
+            }
+        }
+        cout << cnt << " ";
+    }
+}
+
+int main(){
+    int t;cin >> t;
+    while(t--){
+        int n;
+        cin >> n;
+        int stockNote[n];
+        for(int i=0; i<n; i++){
+            cin >> stockNote[i];
+        }
+        stock(stockNote, n);
+        cout << endl;
+    }
+
+}
+
+#include <bits/stdc++.h>
 using namespace std;
 
 main() {
@@ -42,6 +77,7 @@ main() {
         cout<<"\n";
     }
 }
+
 #include <bits/stdc++.h>
 using namespace std;
 main() {
@@ -60,25 +96,3 @@ main() {
         cout << endl;
     }
 }
-
-
-// #include <bits/stdc++.h>
-// using namespace std;
-// main(){
-//     int t, n, a[100005];
-//     stack <int> st;
-//     cin>>t;
-//     while (t--){
-//         cin>>n;
-//         while (st.size()) st.pop();
-//         st.push(0);
-//         for(int i=1;i<=n;i++){
-//             cin>>a[i];
-//             while (st.size()>1&&a[st.top()]<=a[i]) st.pop();
-//             cout<<i-st.top()<<" ";
-//             st.push(i);
-//         }
-//         while (st.size()) st.pop();
-//         cout<<'\n';
-//     }
-// }
