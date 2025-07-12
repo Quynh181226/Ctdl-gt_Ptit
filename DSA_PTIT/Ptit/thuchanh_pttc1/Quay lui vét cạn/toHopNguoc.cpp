@@ -40,38 +40,38 @@
 // 4 3 1
 // 4 2 1
 // 3 2 1
-// #include<iostream>
-// using namespace std;
-//
-// int n, k, arr[20];
-//
-// void in() {
-//     for (int i = 1; i <= k; i++) {
-//         cout << arr[i] << " ";
-//     }
-//     cout << endl;
-// }
-//
-// void quaylui(int i) {
-//     for (int j = arr[i - 1] - 1; j >= k - i + 1; j--) {
-//         arr[i] = j;
-//         if (i == k) in();
-//         else quaylui(i + 1);
-//     }
-// }
-//
-// int main() {
-//     int t;
-//     cin >> t;
-//     if (t >= 10) return 1;
-//     while (t--) {
-//         cin >> n >> k;
-//         if (k <= 1 || k >= n || n >= 20) return 1;
-//         arr[0] = n + 1;
-//         quaylui(1);
-//     }
-//     return 0;
-// }
+#include<iostream>
+using namespace std;
+
+int n, k, arr[20];
+
+void in() {
+    for (int i = 1; i <= k; i++) {
+        cout << arr[i] << " ";
+    }
+    cout << endl;
+}
+
+void quaylui(int i) {
+    for (int j = arr[i - 1] - 1; j >= k - i + 1; j--) {
+        arr[i] = j;
+        if (i == k) in();
+        else quaylui(i + 1);
+    }
+}
+
+int main() {
+    int t;
+    cin >> t;
+    if (t >= 10) return 1;
+    while (t--) {
+        cin >> n >> k;
+        if (k <= 1 || k >= n || n >= 20) return 1;
+        arr[0] = n + 1;
+        quaylui(1);
+    }
+    return 0;
+}
 
 #include<iostream>
 using namespace std;

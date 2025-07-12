@@ -2,7 +2,8 @@
 // Created by TDG on 09/07/2025.
 //
 // DSA07027 - PHẦN TỬ BÊN PHẢI ĐẦU TIÊN LỚN HƠN
-// Cho dãy số A[] gồm N phần tử. Với mỗi A[i], bạn cần tìm phần tử bên phải đầu tiên lớn hơn nó. Nếu không tồn tại, in ra -1.
+// Cho dãy số A[] gồm N phần tử. Với mỗi A[i], bạn cần tìm phần tử bên phải đầu tiên lớn hơn nó.
+// Nếu không tồn tại, in ra -1.
 //
 // Input:
 //

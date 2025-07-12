@@ -4,7 +4,7 @@
 // Cho hai số N, K.
 // Ta đã biết sẽ có tất cả C(N,K) tổ hợp của K số tự nhiên trong N số tự nhiên đầu tiên, được đánh số thứ tự từ 1 đến C(N,K).
 // Ký hiệu C(N,K) là số tổ hợp chập K của N.
-// Hãy liệt kê các tổ hợp của K số tự nhiên trong N số tự nhiên đầu tiên và có thứ tự là số nguyên tố.
+// Hãy liệt kê các tổ hợp của K số tự nhiên trong N số tự nhiên đầu tiên và có thứ tự là số nguyên tố.
 //
 // Input
 // Chỉ có 1 dòng ghi hai số N, K (1 < K < N < 20).

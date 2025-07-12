@@ -32,7 +32,9 @@ main(){
 		vector<canh> ds; ds.clear();
 		for (i = 0; i < m; i++){
 			cin >> dau >> cuoi >> ts;
-			ds.push_back({dau,cuoi,ts});
+			ds.push_back({
+				dau,cuoi,ts
+			});
 		}
 		sort(ds.begin(),ds.end(),cmp);
 		init(n);

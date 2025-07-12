@@ -1,7 +1,8 @@
 //
 // Created by TDG on 23/05/2025.
 //
-// Cho xâu ký tự S có N chữ số thập phân. Hãy liệt kê các số khác nhau có K chữ số lấy từ K vị trí khác nhau trong xâu S theo thứ tự từ nhỏ đến lớn.
+// Cho xâu ký tự S có N chữ số thập phân. Hãy liệt kê các số khác nhau có K chữ số
+// lấy từ K vị trí khác nhau trong xâu S theo thứ tự từ nhỏ đến lớn.
 // Input
 // Dòng đầu ghi số bộ test T (T < 10).
 // Dòng thứ 2 ghi xâu S sau đó là một khoảng trống rồi đến số K (1 < K < N < 20).
