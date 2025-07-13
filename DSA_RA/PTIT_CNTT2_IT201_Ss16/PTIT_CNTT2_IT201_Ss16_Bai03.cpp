@@ -46,7 +46,7 @@ void dequeue(queue *q) {
         q->rear=NULL;
     }
     free(tmp);
-}}
+}
 main() {
     queue *q = createQueue();
     enqueue(q, 10);
