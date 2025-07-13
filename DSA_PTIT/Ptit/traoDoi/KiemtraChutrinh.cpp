@@ -29,7 +29,7 @@ main() {
             cin >> u >> v;
             if(!Union(u, v)) check = true;
         }
-		if(check) cout << "YES" << endl;
+		if(check==true) cout<<"YES"<<endl;
 		else cout << "NO" << endl;
     }
 }

@@ -51,7 +51,7 @@ void quaylui(int i) {
         else quaylui(i+1);
     }
 }
-
+j=a[i-1]+1; j<=n-k+i
 main() {
     cin>>n>>k;
     if (k<=1||k>=n||n>=20) return 1;

@@ -110,3 +110,42 @@ main() {
         cout<<cnt<<" "<<max_val;
     }
 }
+int n,m, max_val=1,p[100001],sz[1000001];
+void init() {
+    for (int i=1; i<=n; i++) {
+        p[i] = i;
+        sz[i] = 1;
+    }
+}
+int find(int u) {
+    if (u!=p[u]) {
+        p[u] = find(p[u]);
+    }
+    return p[u];
+}
+bool Union(int u, int v){
+    int a=find(u), b=find(v);
+    if (a==b) return false;
+    if (a<b) {
+        p[a]=b;
+        sz[b]+=sz[a];
+        max_val=max(max_val, sz[b]);
+    }else{
+        p[b]=a;
+        sz[a]+=sz[b];
+        max_val=max(max_val, sz[a]);
+    }
+    return true;
+}
+main() {
+    int u, v, t, i; cin>>t;
+    while (t--) {
+        cin>>m,n;
+        init(); int cnt=0;
+       for (i=1; i<=m; i++) {
+           cin>>u>>v;if (Union(u) ) cnt--;
+           cout<<cnt<<" "<<max_val
+       }
+
+    }
+}

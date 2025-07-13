@@ -36,6 +36,57 @@
 // 2 1
 // Output
 // 4
-main() {
-    cin.tie(0) -> sync_with_stdio(0);
+#include <bits/stdc++.h>
+using namespace std;
+
+#define el '\n'
+
+int n, m, d[100005], sz[100005];
+
+// Initialize the DSU
+void init(int n) {
+    for (int i = 1; i <= n; i++) {
+        d[i] = i;
+        sz[i] = 1;
+    }
+}
+
+// Find the root of the set containing u (with path compression)
+int find(int u) {
+    if (u == d[u]) return u;
+    return d[u] = find(d[u]);
+}
+
+// Merge two sets containing x and y
+void union_sets(int x, int y) {
+    x = find(x);
+    y = find(y);
+    if (x == y) return;
+    if (x > y) swap(x, y);
+    d[y] = x;
+    sz[x] += sz[y];
+}
+
+void solve() {
+    cin >> n >> m;
+    init(n); // Initialize DSU
+    while (m--) {
+        int x, y;
+        cin >> x >> y;
+        union_sets(x, y); // Process each edge
+    }
+    int mx = 0;
+    for (int i = 2; i <= n; i++) {
+        int x = find(i);
+        if (x > 1) {
+            mx = max(mx, sz[x]);
+        }
+    }
+    cout << sz[1] + mx << el;
+}
+
+signed main() {
+    cin.tie(0)->sync_with_stdio(0);
+    int tc = 1; // cin >> tc;
+    while (tc--) solve();
 }
