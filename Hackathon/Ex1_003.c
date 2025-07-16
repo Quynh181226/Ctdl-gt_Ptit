@@ -195,10 +195,10 @@ main() {
                 Question ques;
                 ques.id=nextId++;
                 printf("Nhap noi dung cau hoi: ");
-                fgets(ques.content, strlen(ques.content), stdin);
+                fgets(ques.content, 101, stdin);
                 ques.content[strcspn(ques.content, "\n")]='\0';
                 printf("Nhap chu de: ");
-                fgets(ques.topic, strlen(ques.topic), stdin);
+                fgets(ques.topic, 101, stdin);
                 ques.topic[strcspn(ques.topic, "\n")]='\0';
                 printf("Nhap do kho: ");
                 scanf("%d", &ques.level);
