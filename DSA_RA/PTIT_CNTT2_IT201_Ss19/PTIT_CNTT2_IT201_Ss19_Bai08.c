@@ -35,9 +35,11 @@ int dfs(Node* root) {
     if (root->left==NULL&&root->right==NULL) {
         root->data;
     }
-    if (dfs(root->left)==-1) return dfs(root->right);
-    if (dfs(root->right)==-1) return  dfs(root->left);
-    return dfs(root->left);
+    int l=dfs(root->left);
+    int r=dfs(root->right);
+    if (l==-1) return r;
+    if (r==-1) return l;
+    return l;
 }
 main() {
     Node* root=createNode();
