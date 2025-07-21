@@ -44,7 +44,5 @@ main() {
     root->left=createNode();
     root->left->left=createNode();
     root->right=createNode();
-    int x; scanf("%d", &x);
-    if (dfs(root, x)) printf("True");
-    else printf("False");
+    printf("%d", dfs(root));
 }
