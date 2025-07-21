@@ -33,7 +33,7 @@ int height(Node* root) {
 int dfs(Node* root) {
     if (root==NULL) return -1;
     if (root->left==NULL&&root->right==NULL) {
-        root->data;
+        return root->data;
     }
     int l=dfs(root->left);
     int r=dfs(root->right);
