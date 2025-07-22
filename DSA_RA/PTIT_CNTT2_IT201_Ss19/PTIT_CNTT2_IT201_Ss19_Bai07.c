@@ -37,7 +37,7 @@ Node* deQueue(queue* q) {
     }
     return NULL;
 }
-void bfs(Node** root, int key) {
+void addNode(Node** root, int key) {
     Node* newNode=(Node*) malloc(sizeof(Node));
     newNode->data=key;
     newNode->left=NULL;
@@ -94,6 +94,6 @@ main() {
     root->right=createNode();
     // preorder(root);
     int x; scanf("%d", &x);
-    bfs(&root, x);
+    addNode(&root, x);
     preorder(root);
 }
