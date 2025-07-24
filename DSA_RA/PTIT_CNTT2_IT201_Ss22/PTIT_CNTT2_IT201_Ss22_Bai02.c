@@ -1,6 +1,3 @@
-//
-// Created by TDG on 22/07/2025.
-//
 #include<stdio.h>
 #include<stdlib.h>
 int n;
@@ -58,21 +55,21 @@ main() {
     Free();
 }
 
-main() {
-    int n, u, v;
-    int ke[101][101], sz[101] = {0};
-
-    scanf("%d", &n);
-    while(scanf("%d %d", &u, &v) == 2) {
-        ke[u][sz[u]++] = v;
-        ke[v][sz[v]++] = u;
-    }
-
-    for(int i = 0; i < n; i++) {
-        printf("%d:", i);
-        for(int j = 0; j < sz[i]; j++) {
-            printf(" %d", ke[i][j]);
-        }
-        printf("\n");
-    }
-}
+// main() {
+//     int n, u, v;
+//     int ke[101][101], sz[101] = {0};
+//
+//     scanf("%d", &n);
+//     while(scanf("%d %d", &u, &v) == 2) {
+//         ke[u][sz[u]++] = v;
+//         ke[v][sz[v]++] = u;
+//     }
+//
+//     for(int i = 0; i < n; i++) {
+//         printf("%d:", i);
+//         for(int j = 0; j < sz[i]; j++) {
+//             printf(" %d", ke[i][j]);
+//         }
+//         printf("\n");
+//     }
+// }
