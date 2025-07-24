@@ -1,6 +1,3 @@
-//
-// Created by TDG on 22/07/2025.
-//
 #include<stdio.h>
 #include<stdlib.h>
 int a[101][101];
