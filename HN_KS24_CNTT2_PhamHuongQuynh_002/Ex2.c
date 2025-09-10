@@ -117,7 +117,7 @@ main() {
         printf("3. Tìm người theo tên\n");
         printf("4. Xóa người theo tên\n");
         printf("5. Thoát\n");
-        printf("Chọn: ");
+        printf("Your choiew: ");
         scanf("%d", &choice);
         getchar();
         switch(choice) {
