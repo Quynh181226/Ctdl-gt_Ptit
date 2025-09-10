@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdbool.h>
 #include <string.h>
 #include <stdlib.h>
 
@@ -31,18 +30,13 @@ Stack *newStack() {
 
 void push(Stack *s, const char *name) {
     Node *newNode = createNode(name);
-    if (newNode == NULL) {
-        printf("Push thất bại\n");
-        return;
-    }
+    if (newNode == NULL) return;
     newNode->next = s->top;
     s->top = newNode;
 }
 
 char *pop(Stack *s) {
-    if (s->top == NULL) {
-        return NULL;
-    }
+    if (s->top == NULL) return NULL;
     Node *temp = s->top;
     char *name = malloc(strlen(temp->name) + 1);
     if (name != NULL) {
@@ -116,7 +110,7 @@ void Free(Stack *s) {
     free(s);
 }
 
-int main() {
+main() {
     Stack *copy = newStack();
     Stack *redo = newStack();
     int choice = 0;
