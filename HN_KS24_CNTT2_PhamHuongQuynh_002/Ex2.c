@@ -33,7 +33,7 @@ TreeNode *addContact(TreeNode *root, const Contact c) {
     } else if (strcmp(c.name, root->d.name) < 0) {
         root->left = addContact(root->left, c);
     } else {
-        printf("Tên đã tồn tại!\n");
+        printf("Dupli\n");
     }
     return root;
 }
